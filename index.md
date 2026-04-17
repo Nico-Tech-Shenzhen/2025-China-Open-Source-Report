@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "2024 中国开源年度报告"
+  name: "2025 中国开源年度报告"
   text: ""
   tagline: 开源社联合多家单位，纵横近十年对中国开源行业的综合性报告，每年发布一次
   actions:
     - theme: brand
-      text: 立即阅读 2024 年度报告
+      text: 立即阅读 2025 年度报告
       link: /preface
     - theme: alt
       text: 往年报告

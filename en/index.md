@@ -3,12 +3,12 @@
 layout: home
 
 hero:
-  name: "2024 China Open Source Annual Report"
+  name: "2025 China Open Source Annual Report"
   text: ""
   tagline: "KAIYUANSHE, in collaboration with multiple communities and organizations, has been releasing an annual comprehensive report on China's open-source industry for nearly a decade, providing longitudinal insights into the ecosystem."
   actions:
     - theme: brand
-      text: Read the 2024 Annual Report Now
+      text: Read the 2025 Annual Report Now
       link: /en/preface
     - theme: alt
       text: Previous reports
