@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export const en = defineConfig({
   lang: 'en-US',
-  title: "2024 COSR",
-  description: "2024 China Open Source Report",
+  title: "2025 COSR",
+  description: "2025 China Open Source Report",
 
   themeConfig: {
     nav: [
@@ -31,7 +31,7 @@ export const en = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/kaiyuanshe/2024-China-Open-Source-Report/edit/main/:path',
+      pattern: 'https://github.com/kaiyuanshe/2025-China-Open-Source-Report/edit/main/:path',
       text: 'Edit this page on GitHub'
     },
   },

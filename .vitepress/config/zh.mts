@@ -3,8 +3,8 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export const zh = defineConfig({
   lang: 'zh-Hans',
-  title: "2024 中国开源年度报告",
-  description: "2024 中国开源年度报告",
+  title: "2025 中国开源年度报告",
+  description: "2025 中国开源年度报告",
 
   themeConfig: {
     nav: [
@@ -31,7 +31,7 @@ export const zh = defineConfig({
     },
 
     editLink: {
-      pattern: 'https://github.com/kaiyuanshe/2024-China-Open-Source-Report/edit/main/:path',
+      pattern: 'https://github.com/kaiyuanshe/2025-China-Open-Source-Report/edit/main/:path',
       text: '在 GitHub 上编辑本页内容'
     },
 
