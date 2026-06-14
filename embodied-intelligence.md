@@ -66,4 +66,4 @@ RoboChallenge​ 平台想获得更大的影响力，需要更多的机器人厂
 
 ---
 
-[阅读报告](./public/RobboChallenge_embodied_report.pdf)
+[阅读报告](./RobboChallenge_embodied_report.pdf)
