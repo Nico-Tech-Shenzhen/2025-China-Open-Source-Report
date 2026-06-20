@@ -27,6 +27,8 @@
   - [Web3.0 篇](./web3.md)
   - [开源大事记](./open-source-milestones.md)
 
+其中 Web3.0 篇由 OpenBuild 与 Web3insight.ai 承担分析与撰写工作。
+
 
 ## 许可证
 
