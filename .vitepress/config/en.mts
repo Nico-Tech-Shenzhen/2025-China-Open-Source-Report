@@ -21,6 +21,7 @@ export const en = defineConfig({
           { text: 'OSS Commercialization', link: '/en/commercialization' },
           { text: 'OSS AI', link: '/en/ossAI' },
           { text: 'OpenSource Embodied Intelligence', link: '/en/embodied-intelligence' },
+          { text: 'Web3.0', link: '/en/web3' },
           { text: 'OSS Chronicle', link: '/en/open-source-milestones' },
         ]
       }

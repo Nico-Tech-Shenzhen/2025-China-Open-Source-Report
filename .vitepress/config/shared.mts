@@ -4,6 +4,7 @@ const deploymentEnvironment = process.env.VITE_DEPLOYMENT_ENVIRONMENT;
 
 export const shared = defineConfig({
   lastUpdated: true,
+  cleanUrls: true,
 
   base: deploymentEnvironment === 'gitee' ? '/2025-china-open-source-report/' : deploymentEnvironment === 'vercel' ? '' : '/2025-China-Open-Source-Report/',
 

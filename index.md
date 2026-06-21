@@ -206,6 +206,20 @@ const aiMembers = [
   },
 ];
 
+// Web3.0 篇
+const web3Members = [
+  {
+    avatar: withBase('/image/home/avatar/ian-xu.png'),
+    name: '许银 Ian Xu',
+    title: 'Web3.0 基础分析',
+  },
+  {
+    avatar: withBase('/image/home/avatar/pseudoyu.jpg'),
+    name: 'pseudoyu',
+    title: 'Web3insight.ai 数据支持',
+  },
+];
+
 // 大事记篇
 const memorabiliaMembers = [
   {
@@ -383,6 +397,13 @@ const infrastructureMembers = [
     </template>
   </VPTeamPageSection>
 
+  <VPTeamPageSection v-if="web3Members">
+    <template #title>Web3.0 篇</template>
+    <template #members>
+      <VPTeamMembers size="small" :members="web3Members" />
+    </template>
+  </VPTeamPageSection>
+
   <VPTeamPageSection v-if="memorabiliaMembers">
     <template #title>开源大事记</template>
     <template #members>
@@ -432,12 +453,16 @@ const infrastructureMembers = [
   <template #title>协作开源社区/单位</template>
 </VPTeamPageTitle>
 
-<div :style="{display: 'flex', width: '100%', center, flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center'}">
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/KaiYuanShe-logo.png"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/x_lab2017_logo.jpg"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/logo-dark-FIT2CLOUD.svg"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/KWDB.png"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/logo_gitee_light.png"/>
+<div class="partner-logo-grid">
+  <img class="partner-logo" src="/image/home/KaiYuanShe-logo.png" alt="开源社"/>
+  <img class="partner-logo" src="/image/home/x_lab2017_logo.jpg" alt="X-lab 开放实验室"/>
+  <img class="partner-logo" src="/image/home/logo-dark-FIT2CLOUD.svg" alt="FIT2CLOUD 飞致云"/>
+  <img class="partner-logo" src="/image/home/KWDB.png" alt="KWDB"/>
+  <img class="partner-logo" src="/image/home/logo_gitee_light.png" alt="Gitee"/>
+  <span class="partner-logo partner-logo-switch" aria-label="OpenBuild">
+    <img class="openbuild-logo-lightmode" src="/image/home/openbuild-logo.svg" alt="OpenBuild"/>
+    <img class="openbuild-logo-darkmode" src="/image/home/openbuild-logo-light.svg" alt="OpenBuild"/>
+  </span>
 </div>
 
 
@@ -450,3 +475,50 @@ const infrastructureMembers = [
   <img :style="{display: 'flex', width: '50%', objectFit: 'contain'}" src="/image/home/sf_logo.png"/>
 </div>
 
+<style>
+.partner-logo-grid {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 28px 40px;
+}
+
+.partner-logo {
+  display: flex;
+  width: 26%;
+  max-height: 170px;
+  object-fit: contain;
+}
+
+.partner-logo-switch {
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo-switch img {
+  display: block;
+  width: 100%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+.openbuild-logo-darkmode {
+  display: none !important;
+}
+
+.dark .openbuild-logo-lightmode {
+  display: none !important;
+}
+
+.dark .openbuild-logo-darkmode {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .partner-logo {
+    width: 42%;
+  }
+}
+</style>

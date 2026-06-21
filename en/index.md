@@ -206,6 +206,20 @@ const aiMembers = [
   },
 ];
 
+// Web3.0 篇
+const web3Members = [
+  {
+    avatar: withBase('/image/home/avatar/ian-xu.png'),
+    name: 'Ian Xu',
+    title: 'Core analysis of the Web3.0 section',
+  },
+  {
+    avatar: withBase('/image/home/avatar/pseudoyu.jpg'),
+    name: 'pseudoyu',
+    title: 'Data support from Web3insight.ai',
+  },
+];
+
 // 大事记篇
 const memorabiliaMembers = [
   {
@@ -381,6 +395,13 @@ const infrastructureMembers = [
     </template>
   </VPTeamPageSection>
 
+  <VPTeamPageSection v-if="web3Members">
+    <template #title>Web3.0 Section</template>
+    <template #members>
+      <VPTeamMembers size="small" :members="web3Members" />
+    </template>
+  </VPTeamPageSection>
+
   <VPTeamPageSection v-if="memorabiliaMembers">
     <template #title>Open Source Chronicle</template>
     <template #members>
@@ -430,12 +451,16 @@ const infrastructureMembers = [
   <template #title>Collaborative Communities/Organizations</template>
 </VPTeamPageTitle>
 
-<div :style="{display: 'flex', width: '100%', center, flexWrap: 'wrap', justifyContent: 'space-around', alignItems: 'center'}">
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/KaiYuanShe-logo.png"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/x_lab2017_logo.jpg"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/logo-dark-FIT2CLOUD.svg"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/KWDB.png"/>
-  <img :style="{display: 'flex', width: '26%', objectFit: 'contain'}" src="/image/home/logo_gitee_light.png"/>
+<div class="partner-logo-grid">
+  <img class="partner-logo" src="/image/home/KaiYuanShe-logo.png" alt="KAIYUANSHE"/>
+  <img class="partner-logo" src="/image/home/x_lab2017_logo.jpg" alt="X-lab Open Laboratory"/>
+  <img class="partner-logo" src="/image/home/logo-dark-FIT2CLOUD.svg" alt="FIT2CLOUD"/>
+  <img class="partner-logo" src="/image/home/KWDB.png" alt="KWDB"/>
+  <img class="partner-logo" src="/image/home/logo_gitee_light.png" alt="Gitee"/>
+  <span class="partner-logo partner-logo-switch" aria-label="OpenBuild">
+    <img class="openbuild-logo-lightmode" src="/image/home/openbuild-logo.svg" alt="OpenBuild"/>
+    <img class="openbuild-logo-darkmode" src="/image/home/openbuild-logo-light.svg" alt="OpenBuild"/>
+  </span>
 </div>
 
 <VPTeamPageTitle>
@@ -446,3 +471,51 @@ const infrastructureMembers = [
   <img :style="{display: 'flex', width: '50%', objectFit: 'contain'}" src="/image/home/csdn_logo.jpg"/>
   <img :style="{display: 'flex', width: '50%', objectFit: 'contain'}" src="/image/home/sf_logo.png"/>
 </div>
+
+<style>
+.partner-logo-grid {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 28px 40px;
+}
+
+.partner-logo {
+  display: flex;
+  width: 26%;
+  max-height: 170px;
+  object-fit: contain;
+}
+
+.partner-logo-switch {
+  align-items: center;
+  justify-content: center;
+}
+
+.partner-logo-switch img {
+  display: block;
+  width: 100%;
+  max-height: 90px;
+  object-fit: contain;
+}
+
+.openbuild-logo-darkmode {
+  display: none !important;
+}
+
+.dark .openbuild-logo-lightmode {
+  display: none !important;
+}
+
+.dark .openbuild-logo-darkmode {
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+  .partner-logo {
+    width: 42%;
+  }
+}
+</style>
