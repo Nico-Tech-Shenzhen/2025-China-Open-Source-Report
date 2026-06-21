@@ -172,39 +172,40 @@ const commercializationMembers = [
     avatar: withBase('/image/home/avatar/袁滚滚.jpg'),
     name: '袁滚滚',
   },
-  {
-    avatar: withBase('/image/home/avatar/徐至行.jpg'),
-    name: '徐至行',
-  },
-  {
-    avatar: withBase('/image/home/avatar/刘景媛.jpg'),
-    name: '刘景媛',
-  },
-  {
-    avatar: withBase('/image/home/avatar/丁宁.jpg'),
-    name: '丁宁',
-  },
-  {
-    avatar: withBase('/image/home/avatar/刘超.jpg'),
-    name: '刘超',
-  },
 ];
 
 // 开源人工智能篇
 const aiMembers = [
   {
+    avatar: withBase('/image/home/avatar/李扬.jpg'),
+    name: '李扬',
+  },
+  {
     avatar: withBase('/image/home/avatar/刘天栋.jpg'),
     name: '刘天栋',
   },
   {
-    avatar: withBase('/image/home/avatar/庄表伟.jpg'),
-    name: '庄表伟',
+    avatar: withBase('/image/home/avatar/FeigeZhu.png'),
+    name: 'Feige Zhu',
   },
   {
-    avatar: withBase('/image/home/avatar/赵生宇.jpg'),
-    name: '赵生宇',
+    avatar: withBase('/image/home/avatar/夏小雅.jpg'),
+    name: '夏小雅',
   },
 ];
+
+// 开源具身智能篇
+const eiMembers = [
+  {
+    avatar: withBase('/image/home/avatar/江波.jpg'),
+    name: '江波',
+  },
+  {
+    avatar: withBase('/image/home/avatar/陈阳.jpg'),
+    name: '陈阳',
+  },
+];
+
 
 // Web3.0 篇
 const web3Members = [
@@ -243,14 +244,9 @@ const memorabiliaMembers = [
     title: "开源社区生态、开源政策",
   },
   {
-    avatar: withBase('/image/home/avatar/卫剑钒.jpg'),
-    name: '卫剑钒',
-    title: "开源许可与合规治理",
-  },
-  {
     avatar: withBase('/image/home/avatar/梁尧.jpg'),
     name: '梁尧',
-    title: "开源许可与合规治理",
+    title: "汽车领域开源",
   },
   {
     avatar: withBase('/image/home/avatar/李明康.jpg'),
@@ -261,61 +257,7 @@ const memorabiliaMembers = [
 
 // 翻译团队
 const translations = [
-  {
-    avatar: withBase('/image/home/avatar/江波.jpg'),
-    name: 'Bo (Nadia) Jiang',
-    title: 'Chairperson, KAIYUANSHE',
-  },
-  {
-    avatar: withBase('/image/home/avatar/李明康.jpg'),
-    name: 'MingKang (Bright) Li',
-    title: 'Board of Directors, KAIYUANSHE',
-  },
-  {
-    avatar: withBase('/image/home/avatar/梁尧.jpg'),
-    name: 'Yao (Leon) Liang',
-    title: 'Vice Chairperson, KAIYUANSHE',
-  },
-  {
-    avatar: withBase('/image/home/avatar/王峰.jpeg'),
-    name: 'Feng (Jason) Wang',
-    title: 'Director of Marketing, SecTrend',
-  },
-  {
-    avatar: withBase('/image/home/avatar/袁滚滚.jpg'),
-    name: 'Yi (Wennyl) Yuan',
-    title: 'KAIYUANSHE Member, Google Women Techmakers Ambassador',
-  },
-  {
-    avatar: withBase('/image/home/avatar/赵思嘉.jpg'),
-    name: 'Sijia Zhao',
-    title: 'X-Lab Open Lab member',
-  },
-  {
-    avatar: withBase('/image/home/avatar/刘天栋.jpg'),
-    name: 'Ted Liu',
-    title: 'Co-Founder of KAIYUANSHE, ASF Member, https://www.linkedin.com/in/liuted',
-  },
-  {
-    avatar: withBase('/image/home/avatar/FeiTeng.jpg'),
-    name: 'Fei Teng',
-    title: 'Volunteer, https://www.linkedin.com/in/fei-t-3756356',
-  },
-  {
-    avatar: withBase('/image/home/avatar/卫剑钒.jpg'),
-    name: 'Jianfan (Sir) Wei',
-    title: 'KAIYUANSHE Member, Translator of The Cathedral & the Bazaar',
-  },
-  {
-    avatar: withBase('/image/home/avatar/FeigeZhu.png'),
-    name: 'Feige Zhu',
-    title: 'FIT2CLOUD',
-  },
-  {
-    avatar: withBase('/image/home/avatar/庄表伟.jpg'),
-    name: 'Biaowei Zhuang',
-    title: 'Board of Directors, KAIYUANSHE',
-  },
+
 ]
 
 // 整体报告汇总/编辑
@@ -394,6 +336,13 @@ const infrastructureMembers = [
     <template #title>开源人工智能篇</template>
     <template #members>
       <VPTeamMembers size="small" :members="aiMembers" />
+    </template>
+  </VPTeamPageSection>
+
+  <VPTeamPageSection v-if="eiMembers">
+    <template #title>开源具身智能篇</template>
+    <template #members>
+      <VPTeamMembers size="small" :members="eiMembers" />
     </template>
   </VPTeamPageSection>
 
