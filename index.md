@@ -114,6 +114,10 @@ const aiMembers = [
     name: 'Ted Wang',
     title: '基础建设部分',
   },
+  {
+    avatar: withBase('/image/home/avatar/tedwang.jpg'),
+    name: '刘天栋',
+  },
 ];
 
 // 开源具身智能篇
@@ -146,24 +150,9 @@ const web3Members = [
 // 大事记篇
 const memorabiliaMembers = [
   {
-    avatar: withBase('/image/home/avatar/袁滚滚.jpg'),
-    name: '袁滚滚',
-    title: "开源技术、开源商业化",
-  },
-  {
-    avatar: withBase('/image/home/avatar/INP.png'),
-    name: 'INP',
-    title: "开源技术",
-  },
-  {
-    avatar: withBase('/image/home/avatar/王峰.jpeg'),
-    name: '王峰',
-    title: "开源安全",
-  },
-  {
     avatar: withBase('/image/home/avatar/庄表伟.jpg'),
     name: '庄表伟',
-    title: "开源社区生态、开源政策",
+    title: "总体章节",
   },
   {
     avatar: withBase('/image/home/avatar/梁尧.jpg'),
@@ -182,33 +171,29 @@ const translations = [
 
 ]
 
-// 整体报告汇总/编辑
+// 整体报告汇总/编辑排版
 const copyreaders = [
   {
-    avatar: withBase('/image/home/avatar/赵思嘉.jpg'),
-    name: '赵思嘉',
+    avatar: withBase('/image/home/avatar/庄表伟.jpg'),
+    name: '庄表伟',
   },
   {
-    avatar: withBase('/image/home/avatar/刘天栋.jpg'),
-    name: '刘天栋',
+    avatar: withBase('/image/home/avatar/谢思怡.jpg'),
+    name: '谢思怡',
+  },
+   {
+    avatar: withBase('/image/home/avatar/李明康.jpg'),
+    name: '李明康',
   },
 ];
 
 // 基础设施支持
 const infrastructureMembers = [
   {
-    avatar: withBase('/image/home/avatar/丁文昊.png'),
-    name: '丁文昊',
+    avatar: withBase('/image/home/avatar/庄表伟.jpg'),
+    name: '庄表伟',
   },
 ]
-
-// 设计/排版
-// const artWorkers = [
-//   {
-//     avatar: withBase('/image/home/avatar/王军.jpg'),
-//     name: '王军',
-//   }
-// ]
 
 </script>
 
