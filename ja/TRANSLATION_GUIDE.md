@@ -30,6 +30,12 @@ TAKASU Masakazu（@takasumasakazu） is responsible for the main translation, re
 - Do not change numbers, data, organization names, project names, URLs, or citations.
 - Keep organization and project names unchanged unless `ja/glossary.tsv` defines a Japanese form.
 
+## References
+
+- In Japanese references, preserve original Chinese titles for searchability and add Japanese translations where useful.
+- Do not replace original Chinese titles with Japanese-only titles.
+- Do not translate official English paper titles or webpage titles that are already in English.
+
 ## Visual Assets
 
 - Do not edit, recreate, translate, regenerate, redraw, or replace images, charts, graphs, diagrams, screenshots, SVGs, PNGs, or other visual assets.
@@ -134,6 +140,61 @@ Examples:
 - `大規模モデルのオープンソース・オープン等級標準`: explain as a standard for evaluating how open a large AI model is.
 - `デジタル公共インフラ（DPI）`: explain as shared digital foundations such as digital ID, payment, and data exchange systems.
 
+## Physical AI / embodied intelligence chapters
+
+- Preserve report-style Japanese. Use `〜である`, `〜した`, and `〜を示している` where the surrounding chapter uses that tone.
+- Do not make the text conversational, and do not add long explanatory paragraphs.
+- Prefer short parenthetical explanations on first appearance.
+- Preserve the original paragraph flow as much as possible.
+- Add explanations only where Japanese readers may not know the organization, platform, model type, benchmark, technical term, or policy term.
+
+Core terminology:
+
+- `具身智能`: use `フィジカルAI（Embodied AI）` on first appearance when needed, then `フィジカルAI`.
+- `VLA`: use `VLA（Vision-Language-Action、視覚・言語・行動を結びつけるモデル）` on first appearance when needed.
+- `VLM`: use `VLM（Vision-Language Model、視覚言語モデル）`.
+- `机器人基础模型`: use `ロボット基盤モデル` or `フィジカルAI基盤モデル`, depending on context.
+- `世界模型`: use `世界モデル`.
+- `人形机器人` / `人型机器人`: use `ヒューマノイドロボット`.
+- `机器人本体`: use `ロボット本体` or `機体`.
+- `机器人`: use `ロボット`.
+- `生态`: use `エコシステム`.
+- `场景`: use `利用シーン`, `現場`, or `用途`, depending on context.
+- `落地`: use `実用化`, `現場導入`, or `本番利用`.
+- `产业化`: use `産業化` or `事業化`.
+- `量产`: use `量産`.
+- `供应链`: use `サプライチェーン`.
+
+Avoid literal or awkward renderings such as:
+
+- `具身知能`
+- `身体化知能`
+- `生態`
+- `落地`
+- `賦能`
+- `シーン`
+- `閉ループ`
+- `高地`
+- `深水域`
+
+World model handling:
+
+- When `世界モデル` appears in embodied intelligence chapters, distinguish the meaning by context.
+- One route is control-loop world models: models that generate future visual states while directly outputting robot actions, often related to WAM / VA or robot control loops.
+- Another route is Interactive World Modeling: models that generate an explorable, interactive, temporally consistent virtual world in real time, conditioned on user controls such as keyboard, mouse, controller, or actions.
+- Explain this distinction concisely and preserve the report style.
+
+Explanations for Japanese readers:
+
+- For proper nouns in robotics / embodied intelligence chapters, consult `ja/entity_names.tsv`.
+- For unfamiliar Chinese companies, institutes, platforms, models, and benchmarks, add short parenthetical explanations on first appearance.
+- Examples: `清華大学智能産業研究院（AIR、清華大学のAI・産業応用研究機関）`, `上海人工知能実験室（Shanghai AI Laboratory、中国の大規模AI研究機関）`, `北京智源人工知能研究院（BAAI、中国の代表的なAI研究機関）`, `X Square Robot（中国のフィジカルAIスタートアップ）`, `Dexmal（中国のフィジカルAI企業）`.
+- Do not turn these into long company profiles.
+- For tables, prefer including both Japanese/Chinese display names and English names when that helps future readers search.
+- If the official English name is uncertain, keep the Chinese name and mark it in `ja/entity_names.tsv` as `needs-review`.
+- Keep model names, dataset names, and benchmark names in their original English / Chinese-English form unless a stable Japanese rendering exists.
+- Do not over-explain globally familiar terms such as AI, GitHub, Python, Linux, model, dataset, code, deployment, benchmark, RTX 4090, or Hugging Face.
+
 ## Per-chapter editing workflow
 
 - Edit only the chapter requested by the user.
@@ -143,11 +204,3 @@ Examples:
 - Preserve meaning and factual claims.
 - Add glossary entries with `status=needs-review` when important recurring terms are missing.
 - After editing, show `git diff --stat`, summarize changes, list glossary changes, list remaining Simplified Chinese strings, and do not commit automatically unless asked.
-
-## Commercialization chapter rules
-
-- In `ja/commercialization.md`, use Japanese report-style chapter headings such as `## 第一章｜...`, `## 第二章｜...`, and `## 第三章｜...`; do not use Chinese-style headings such as `## 一、...`. The introduction may remain `## はじめに`.
-- For Chinese companies, projects, services, and ecosystems that are not widely known in Japan, add a concise parenthetical explanation on first appearance. Keep it short: explain the relevance, not the full company profile.
-- In commercialization contexts, explain `財団ガバナンス` concretely as neutral foundation governance over trademarks, releases, roadmaps, security response, contribution rules, and decision-making among participating companies and communities, rather than single-company control.
-- Prefer natural commercialization terms such as `事業化`, `商用導入`, `収益化`, `商用ディストリビューション`, `長期サポート`, `互換性認証`, `ハードウェア対応`, `技術的自立性を高める基盤`, `業界別の利用シーン`, `エコシステム`, and `サプライチェーン`.
-- Avoid literal Chinese-style expressions such as `価値実現`, `商業化実装`, `閉ループ`, `賦能`, `生態`, `落地`, `深水域`, `高地`, `ハードウェア適配`, and `業界別シーン`.
